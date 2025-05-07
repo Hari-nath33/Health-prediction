@@ -8,7 +8,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 
 # Load the dataset
-df = pd.read_csv("/content/diabetes.csv")
+df = pd.read_csv("Testing.csv")
 
 # Basic info
 print(df.head())
