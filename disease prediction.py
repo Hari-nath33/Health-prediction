@@ -20,12 +20,12 @@ print(df.columns)
 print(df.isnull().sum())
 
 # Correlation matrix
-sns.heatmap(df.corr(), annot=True)
+sns.heatmap(df.drop('prognosis', axis=1).corr(), annot=True)
 plt.show()
 
 # Splitting the dataset
-X = df.drop('Outcome', axis=1)
-y = df['Outcome']
+X = df.drop('prognosis', axis=1)
+y = df['prognosis']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
 
 # Logistic Regression
